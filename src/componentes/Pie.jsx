@@ -1,11 +1,13 @@
-import Logo from './Logo.jsx'
+import { SITIO } from '../datos/sitio.js'
 
 function Pie() {
   return (
     <footer className="pie">
       <div className="contenedor pie-fila">
-        <Logo />
-        <p>Página creada por Iván Mena · {new Date().getFullYear()}</p>
+        <p>Página creada por Iván Mena</p>
+        <p>
+          {SITIO.ubicacion} · {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   )

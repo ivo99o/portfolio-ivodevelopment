@@ -6,6 +6,7 @@
   min-height: 100vh;
   min-height: 100svh;
   padding: 100px 0 56px;
+  border-bottom: 1px solid var(--borde);
 }
 
 .hero-fondo {
@@ -147,6 +148,7 @@
   min-height: 100svh;
   padding-top: 68px;
   background: var(--fondo-alt);
+  border-top: 1px solid var(--borde);
 }
 
 .cierre .seccion-contacto {
