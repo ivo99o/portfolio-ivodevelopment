@@ -13,6 +13,7 @@ function Stack() {
           {STACK.map((g) => (
             <div key={g.grupo} className="stack-grupo">
               <h3>{g.grupo}</h3>
+              <p>{g.texto}</p>
               <ul>
                 {g.items.map((it) => (
                   <li key={it} className="chip">

@@ -7,14 +7,15 @@ export const PROYECTOS = [
       'Sistema para administrar un taller: clientes, vehículos, mecánicos e historial. Cada cliente recibe un código para seguir su vehículo: estado, mecánico a cargo, fotos, fecha y hora de cada actualización y un mensaje explicativo. Incluye los presupuestos y facturas en PDF.',
     tecnologias: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary'],
     imagenes: [],
+    nota: 'Sistema privado: mirá las capturas.',
     enlaces: [{ texto: 'Ver código', url: 'https://github.com/ivo99o/CRM-taller', tipo: 'codigo' }],
   },
   {
     id: 'tareo',
     etiqueta: 'Demo en vivo',
-    titulo: 'tareo, gestor de tareas',
+    titulo: 'Gestor de tareas con avisos',
     descripcion:
-      'Gestor de tareas con categorías, fechas límite y avisos por WhatsApp cuando una tarea está por vencer. Podés crear una cuenta y probarlo ahora.',
+      'tareo organiza tus tareas con categorías y fechas límite, y te avisa por WhatsApp cuando una está por vencer. Podés crear una cuenta y probarlo ahora.',
     tecnologias: ['React', 'Vite', 'Bootstrap', 'Supabase', 'PostgreSQL', 'Twilio', 'Vercel'],
     imagenes: [],
     enlaces: [

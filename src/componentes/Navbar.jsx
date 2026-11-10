@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NAVEGACION, SITIO } from '../datos/sitio.js'
 import Logo from './Logo.jsx'
+import { irASeccion } from '../utils.js'
 
 function Navbar() {
   const [abierto, setAbierto] = useState(false)
@@ -34,7 +35,14 @@ function Navbar() {
         </button>
         <nav className={`navbar-enlaces ${abierto ? 'abierto' : ''}`}>
           {NAVEGACION.map((e) => (
-            <a key={e.id} href={`#${e.id}`} onClick={ir}>
+            <a
+              key={e.id}
+              href={`#${e.id}`}
+              onClick={(ev) => {
+                ir()
+                irASeccion(e.id, ev)
+              }}
+            >
               {e.texto}
             </a>
           ))}

@@ -1,5 +1,6 @@
 import { SITIO } from '../datos/sitio.js'
 import Icono from './Icono.jsx'
+import { irASeccion } from '../utils.js'
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
           </h1>
           <p className="hero-bajada">{SITIO.bajada}</p>
           <div className="hero-botones">
-            <a href="#proyectos" className="boton boton-primario">
+            <a href="#proyectos" className="boton boton-primario" onClick={(e) => irASeccion('proyectos', e)}>
               Ver proyectos <Icono nombre="flecha" tam={18} />
             </a>
             <a

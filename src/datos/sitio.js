@@ -43,8 +43,24 @@ export const SERVICIOS = [
 ]
 
 export const STACK = [
-  { grupo: 'Lo que ve el usuario', items: ['React', 'Vite', 'React Router', 'Bootstrap', 'Tailwind CSS'] },
-  { grupo: 'El motor por detrás', items: ['Node.js', 'Express', 'JWT', 'API REST'] },
-  { grupo: 'Dónde se guarda la información', items: ['PostgreSQL', 'Supabase', 'MongoDB', 'Cloudinary'] },
-  { grupo: 'Conexiones con otros servicios', items: ['Twilio WhatsApp', 'whatsapp-web.js', 'PDF', 'Vercel'] },
+  {
+    grupo: 'Lo que ve el usuario',
+    texto: 'La parte visual: pantallas, botones y formularios que se ven bien en celular y en compu.',
+    items: ['React', 'Vite', 'React Router', 'Bootstrap', 'Tailwind CSS'],
+  },
+  {
+    grupo: 'El motor por detrás',
+    texto: 'La lógica que procesa los datos, controla quién puede entrar y responde a cada acción.',
+    items: ['Node.js', 'Express', 'JWT', 'API REST'],
+  },
+  {
+    grupo: 'Dónde se guarda la información',
+    texto: 'Bases de datos y almacenamiento para que tu información esté ordenada y segura.',
+    items: ['PostgreSQL', 'Supabase', 'MongoDB', 'Cloudinary'],
+  },
+  {
+    grupo: 'Conexiones con otros servicios',
+    texto: 'Avisos por WhatsApp, documentos en PDF y publicación en internet.',
+    items: ['Twilio WhatsApp', 'whatsapp-web.js', 'PDF', 'Vercel'],
+  },
 ]
