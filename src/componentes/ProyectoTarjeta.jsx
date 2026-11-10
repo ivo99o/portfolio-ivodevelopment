@@ -20,7 +20,7 @@ function ProyectoTarjeta({ proyecto }) {
             </li>
           ))}
         </ul>
-        {p.nota && <p className="proyecto-nota">{p.nota}</p>}
+        <p className="proyecto-nota">{p.nota}</p>
         <div className="proyecto-enlaces" style={{ '--columnas': p.enlaces.length + 1 }}>
           {p.enlaces
             .filter((e) => e.tipo === 'demo')

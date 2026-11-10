@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NAVEGACION, SITIO } from '../datos/sitio.js'
 import Logo from './Logo.jsx'
-import { irASeccion } from '../utils.js'
+import { irASeccion, medirBarra } from '../utils.js'
 
 function Navbar() {
   const [abierto, setAbierto] = useState(false)
@@ -12,6 +12,12 @@ function Navbar() {
     alScroll()
     window.addEventListener('scroll', alScroll, { passive: true })
     return () => window.removeEventListener('scroll', alScroll)
+  }, [])
+
+  useEffect(() => {
+    medirBarra()
+    window.addEventListener('resize', medirBarra)
+    return () => window.removeEventListener('resize', medirBarra)
   }, [])
 
   const ir = () => setAbierto(false)

@@ -3,7 +3,7 @@ import ProyectoTarjeta from './ProyectoTarjeta.jsx'
 
 function Proyectos() {
   return (
-    <section id="proyectos" className="seccion">
+    <section id="proyectos" className="seccion seccion-proyectos">
       <div className="contenedor">
         <header className="seccion-cabecera">
           <p className="seccion-etiqueta">// proyectos</p>

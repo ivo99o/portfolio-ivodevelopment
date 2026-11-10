@@ -253,6 +253,10 @@
   margin-top: 1rem;
 }
 
+.proyecto-nota:empty {
+  display: none;
+}
+
 .proyecto-nota {
   margin-top: 0.9rem;
   font-size: 0.82rem;
@@ -572,4 +576,92 @@
   gap: 0.6rem;
   font-size: 0.85rem;
   color: var(--apagado);
+}
+
+/* Escritorio: el apartado ocupa exactamente el alto visible, bajo la barra,
+   y las dos tarjetas comparten filas para quedar simétricas. */
+@media (min-width: 900px) {
+  .seccion-proyectos > .contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--alto-barra, 68px) - 2 * var(--margen-vista, 20px));
+    min-height: calc(100svh - var(--alto-barra, 68px) - 2 * var(--margen-vista, 20px));
+  }
+
+  .seccion-proyectos .seccion-cabecera {
+    margin-bottom: clamp(1rem, 2.4vh, 1.8rem);
+  }
+
+  .seccion-proyectos .proyectos {
+    flex: 1;
+    grid-template-rows: minmax(110px, 1fr) repeat(6, auto);
+    column-gap: 24px;
+    row-gap: 0;
+  }
+
+  .seccion-proyectos .proyecto {
+    display: grid;
+    grid-row: span 7;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+
+  .seccion-proyectos .proyecto-info {
+    display: contents;
+  }
+
+  .seccion-proyectos .proyecto > .ventana {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    height: 100%;
+    max-height: 340px;
+  }
+
+  .seccion-proyectos .ventana-imagen {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .seccion-proyectos .ventana-imagen img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .seccion-proyectos .ventana-vacia {
+    flex: 1;
+    height: auto;
+  }
+
+  .seccion-proyectos .proyecto-info > * {
+    margin-inline: 0.4rem;
+  }
+
+  .seccion-proyectos .proyecto-info > .chip-azul {
+    grid-row: 2;
+    justify-self: start;
+    margin-top: 0.9rem;
+  }
+  .seccion-proyectos .proyecto-info > h3 {
+    grid-row: 3;
+  }
+  .seccion-proyectos .proyecto-info > p:not(.proyecto-nota) {
+    grid-row: 4;
+  }
+  .seccion-proyectos .proyecto-tecnologias {
+    grid-row: 5;
+    align-content: flex-start;
+  }
+  .seccion-proyectos .proyecto-nota {
+    grid-row: 6;
+  }
+  .seccion-proyectos .proyecto-enlaces {
+    grid-row: 7;
+    margin-top: 0;
+    align-self: end;
+  }
 }

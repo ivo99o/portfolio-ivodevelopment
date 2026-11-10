@@ -1,9 +1,17 @@
-const ALTO_BARRA = 68
+const ALTO_BARRA_BASE = 68
+
+export function medirBarra() {
+  const barra = document.querySelector('.navbar')
+  const alto = barra ? Math.round(barra.getBoundingClientRect().height) : ALTO_BARRA_BASE
+  document.documentElement.style.setProperty('--alto-barra', `${alto}px`)
+  return alto
+}
 
 export function irASeccion(id, evento) {
   const seccion = document.getElementById(id)
   if (!seccion) return
   if (evento) evento.preventDefault()
+  const ALTO_BARRA = medirBarra()
   const contenido = seccion.querySelector('.contenedor') || seccion
   const caja = contenido.getBoundingClientRect()
   const disponible = window.innerHeight - ALTO_BARRA
