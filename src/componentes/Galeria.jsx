@@ -71,6 +71,7 @@ export function Visor({ imagenes, titulo, onCerrar }) {
             </button>
           )}
           <img src={imagenes[activa].src} alt={imagenes[activa].alt || titulo} onClick={detener} />
+          {imagenes[activa].pie && <p className="visor-pie">{imagenes[activa].pie}</p>}
           {total > 1 && (
             <button
               type="button"

@@ -348,14 +348,17 @@
   z-index: 100;
   display: grid;
   place-items: center;
-  padding: 56px 16px;
+  padding: 56px 16px 92px;
   background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(6px);
 }
 
 .visor > img {
   max-width: min(1280px, 100%);
-  max-height: 100%;
+  max-height: calc(100vh - 148px);
+  max-height: calc(100dvh - 148px);
+  width: auto;
+  height: auto;
   border-radius: 10px;
   border: 1px solid var(--borde-fuerte);
 }
@@ -415,6 +418,16 @@
 
 .visor-vacio h3 {
   font-size: 1.2rem;
+}
+
+.visor-pie {
+  position: absolute;
+  bottom: 42px;
+  left: 64px;
+  right: 64px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--blanco);
 }
 
 .visor-contador {
