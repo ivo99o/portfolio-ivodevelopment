@@ -12,8 +12,8 @@ function Proyectos() {
           <p>Sistemas reales, pensados de punta a punta: diseño, base de datos, lógica y publicación.</p>
         </header>
         <div className="proyectos">
-          {PROYECTOS.map((p, i) => (
-            <article key={p.id} className={`proyecto ${i % 2 ? 'invertido' : ''}`}>
+          {PROYECTOS.map((p) => (
+            <article key={p.id} className="proyecto">
               <div className="proyecto-media">
                 <Galeria imagenes={p.imagenes} titulo={p.titulo} />
               </div>
@@ -21,14 +21,6 @@ function Proyectos() {
                 <span className="chip chip-azul">{p.etiqueta}</span>
                 <h3>{p.titulo}</h3>
                 <p>{p.descripcion}</p>
-                <ul className="proyecto-puntos">
-                  {p.puntos.map((punto) => (
-                    <li key={punto}>
-                      <Icono nombre="tilde" tam={16} trazo={2.400} />
-                      {punto}
-                    </li>
-                  ))}
-                </ul>
                 <ul className="proyecto-tecnologias">
                   {p.tecnologias.map((t) => (
                     <li key={t} className="chip">

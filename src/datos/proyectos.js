@@ -4,7 +4,7 @@ export const PROYECTOS = [
     etiqueta: 'Sistema de gestión',
     titulo: 'CRM para taller de vehículos',
     descripcion:
-      'Sistema completo para administrar un taller: clientes, vehículos, mecánicos, historial de trabajos y facturación. Incluye un panel de administración y un panel para que cada cliente consulte lo suyo.',
+      'Sistema para administrar un taller: clientes, vehículos, mecánicos, historial y facturas en PDF, con panel de administración y un panel para cada cliente.',
     puntos: [
       'Panel de administración con tablero, clientes, vehículos, mecánicos e historial',
       'Facturas descargables en PDF',
@@ -14,14 +14,14 @@ export const PROYECTOS = [
     tecnologias: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary'],
     imagenes: [],
     enlaces: [{ texto: 'Ver código', url: 'https://github.com/ivo99o/CRM-taller', tipo: 'codigo' }],
-    nota: 'Por ser un sistema completo, no está abierto al público. Mirá las capturas.',
+    nota: 'Sistema privado: mirá las capturas.',
   },
   {
     id: 'tareo',
     etiqueta: 'Demo en vivo',
     titulo: 'tareo, gestor de tareas',
     descripcion:
-      'Organizador de tareas con categorías, fechas límite y estados que cambian según el tiempo que falta. Avisa por WhatsApp cuando una tarea está por vencer. Podés crear una cuenta y probarlo ahora mismo.',
+      'Gestor de tareas con categorías, fechas límite y avisos por WhatsApp cuando una tarea está por vencer. Podés crear una cuenta y probarlo ahora.',
     puntos: [
       'Registro con email o cuenta de Google',
       'Selector de fecha y hora propio, cómodo en celular',
