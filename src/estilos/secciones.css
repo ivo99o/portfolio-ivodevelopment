@@ -141,6 +141,20 @@
   padding: 88px 0;
 }
 
+/* Cada apartado ocupa justo el alto visible: su borde superior queda
+   donde termina la barra y su borde inferior donde termina la ventana. */
+.seccion:not(.seccion-contacto) {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--alto-barra, 68px));
+  min-height: calc(100svh - var(--alto-barra, 68px));
+  border-bottom: 1px solid var(--borde);
+}
+
+.seccion:not(.seccion-contacto) > .contenedor {
+  width: 100%;
+}
+
 .cierre {
   display: flex;
   flex-direction: column;
@@ -148,7 +162,6 @@
   min-height: 100svh;
   padding-top: 68px;
   background: var(--fondo-alt);
-  border-top: 1px solid var(--borde);
 }
 
 .cierre .seccion-contacto {
@@ -168,7 +181,6 @@
 
 .seccion-alt {
   background: var(--fondo-alt);
-  border-block: 1px solid var(--borde);
 }
 
 .seccion-cabecera {
@@ -581,11 +593,19 @@
 /* Escritorio: el apartado ocupa exactamente el alto visible, bajo la barra,
    y las dos tarjetas comparten filas para quedar simétricas. */
 @media (min-width: 900px) {
+  .seccion:not(.seccion-contacto) {
+    padding-block: 40px;
+  }
+
+  .seccion.seccion-proyectos {
+    padding-block: var(--margen-vista, 20px);
+  }
+
   .seccion-proyectos > .contenedor {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - var(--alto-barra, 68px) - 2 * var(--margen-vista, 20px));
-    min-height: calc(100svh - var(--alto-barra, 68px) - 2 * var(--margen-vista, 20px));
+    min-height: calc(100vh - var(--alto-barra, 68px) - 2 * var(--margen-vista, 20px) - 1px);
+    min-height: calc(100svh - var(--alto-barra, 68px) - 2 * var(--margen-vista, 20px) - 1px);
   }
 
   .seccion-proyectos .seccion-cabecera {
