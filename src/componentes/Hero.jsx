@@ -11,7 +11,7 @@ function Hero() {
             <span className="punto" /> Disponible para nuevos proyectos
           </p>
           <h1>
-            Hola, soy Iván Mena, pero me dicen <span className="resaltado">ivo</span>
+            Desarrollo web y <span className="resaltado">sistemas a medida</span>
           </h1>
           <p className="hero-bajada">{SITIO.bajada}</p>
           <div className="hero-botones">
