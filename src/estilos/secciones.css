@@ -517,6 +517,12 @@
   border: 1px solid var(--borde);
   border-radius: var(--radio);
   background: var(--superficie);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.stack-grupo:hover {
+  border-color: rgba(30, 144, 255, 0.5);
+  transform: translateY(-3px);
 }
 
 .stack-grupo h3 {
