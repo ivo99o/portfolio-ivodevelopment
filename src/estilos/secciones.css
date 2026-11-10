@@ -482,21 +482,18 @@
 }
 
 .stack-grupo {
-  padding: 1.6rem;
+  padding: 1.4rem;
   border: 1px solid var(--borde);
   border-radius: var(--radio);
   background: var(--superficie);
 }
 
 .stack-grupo h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
-}
-
-.stack-grupo > p {
-  margin-bottom: 1.1rem;
-  font-size: 0.9rem;
-  color: var(--apagado);
+  margin-bottom: 1rem;
+  font-family: var(--fuente-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--azul);
 }
 
 .stack-grupo ul {
