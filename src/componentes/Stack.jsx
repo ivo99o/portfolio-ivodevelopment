@@ -2,12 +2,12 @@ import { STACK } from '../datos/sitio.js'
 
 function Stack() {
   return (
-    <section id="stack" className="seccion">
+    <section id="herramientas" className="seccion">
       <div className="contenedor">
         <header className="seccion-cabecera">
-          <p className="seccion-etiqueta">// stack</p>
-          <h2>Con qué trabajo</h2>
-          <p>Herramientas que uso en mis proyectos publicados.</p>
+          <p className="seccion-etiqueta">// herramientas</p>
+          <h2>Las herramientas con las que trabajo</h2>
+          <p>Tecnologías modernas que uso para que tu sitio o sistema sea rápido, seguro y fácil de mantener.</p>
         </header>
         <div className="stack">
           {STACK.map((g) => (

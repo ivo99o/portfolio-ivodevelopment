@@ -1,7 +1,11 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 150px 0 90px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 100px 0 56px;
 }
 
 .hero-fondo {
@@ -119,7 +123,7 @@
 
 @media (max-width: 899.98px) {
   .hero {
-    padding: 112px 0 64px;
+    padding: 96px 0 48px;
   }
   .hero-fila {
     grid-template-columns: 1fr;
@@ -133,7 +137,15 @@
 }
 
 .seccion {
-  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 88px 0 40px;
+}
+
+.seccion > .contenedor {
+  width: 100%;
 }
 
 .seccion-alt {
@@ -143,7 +155,7 @@
 
 .seccion-cabecera {
   max-width: 640px;
-  margin-bottom: 2.2rem;
+  margin-bottom: clamp(1.4rem, 3.5vh, 2.4rem);
 }
 
 .seccion-etiqueta {
@@ -167,7 +179,7 @@
 
 @media (max-width: 767.98px) {
   .seccion {
-    padding: 68px 0;
+    padding: 88px 0 48px;
   }
 }
 
@@ -180,8 +192,8 @@
 .proyecto {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  padding: 1rem 1rem 1.4rem;
+  gap: 0.9rem;
+  padding: 0.8rem 0.8rem 1.1rem;
   border: 1px solid var(--borde);
   border-radius: 18px;
   background: var(--superficie);
@@ -271,7 +283,7 @@
   place-items: center;
   align-content: center;
   gap: 0.6rem;
-  aspect-ratio: 16 / 9;
+  height: clamp(110px, 18vh, 230px);
   color: var(--apagado);
   font-family: var(--fuente-mono);
   font-size: 0.85rem;
@@ -292,44 +304,7 @@
 
 .ventana-imagen img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top;
-}
-
-.ventana-miniaturas {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.6rem;
-  overflow-x: auto;
-  border-top: 1px solid var(--borde);
-  background: var(--superficie-2);
-}
-
-.ventana-miniaturas button {
-  flex: none;
-  width: 84px;
-  padding: 0;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  overflow: hidden;
-  opacity: 0.6;
-  background: #000;
-  transition: opacity 0.15s ease, border-color 0.15s ease;
-}
-
-.ventana-miniaturas button:hover,
-.ventana-miniaturas button.activa {
-  opacity: 1;
-}
-
-.ventana-miniaturas button.activa {
-  border-color: var(--azul);
-}
-
-.ventana-miniaturas img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
+  height: clamp(110px, 18vh, 230px);
   object-fit: cover;
   object-position: top;
 }
@@ -386,6 +361,27 @@
 
 .visor-flecha.derecha {
   right: 14px;
+}
+
+.visor-vacio {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+  max-width: 420px;
+  padding: 2.2rem 2rem;
+  border: 1px solid var(--borde-fuerte);
+  border-radius: 16px;
+  background: var(--superficie);
+  text-align: center;
+  color: var(--apagado);
+}
+
+.visor-vacio svg {
+  color: var(--azul);
+}
+
+.visor-vacio h3 {
+  font-size: 1.2rem;
 }
 
 .visor-contador {
@@ -508,7 +504,7 @@
 }
 
 .pie {
-  padding: 28px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--borde);
 }
 

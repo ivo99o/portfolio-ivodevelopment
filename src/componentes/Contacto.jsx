@@ -12,7 +12,13 @@ function Contacto() {
           <p>Contame qué necesitás y vemos cómo resolverlo. La consulta no tiene costo.</p>
           <div className="contacto-botones">
             <a className="boton boton-primario boton-grande" href={enlaceWhatsapp} target="_blank" rel="noopener noreferrer">
-              <Icono nombre="whatsapp" tam={20} /> WhatsApp {SITIO.whatsappVisible}
+              <Icono nombre="whatsapp" tam={20} /> Escribime por WhatsApp
+            </a>
+            <a className="boton boton-borde boton-grande" href={SITIO.instagram} target="_blank" rel="noopener noreferrer">
+              <Icono nombre="instagram" tam={20} /> {SITIO.instagramUsuario}
+            </a>
+            <a className="boton boton-borde boton-grande" href={`mailto:${SITIO.email}`}>
+              <Icono nombre="mail" tam={20} /> Enviar un mail
             </a>
             <a className="boton boton-borde boton-grande" href={SITIO.github} target="_blank" rel="noopener noreferrer">
               <Icono nombre="github" tam={20} /> GitHub

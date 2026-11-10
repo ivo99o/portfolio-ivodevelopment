@@ -4,16 +4,18 @@ export const SITIO = {
   bajada:
     'Hola, soy Iván Mena, pero me dicen ivo. Diseño y programo páginas web y sistemas de gestión para emprendedores y negocios: simples de usar, rápidos y pensados para tu forma de trabajar.',
   whatsapp: '5493813043167',
-  whatsappVisible: '381 304 3167',
   mensajeWhatsapp: 'Hola Ivo, vi tu portfolio y quiero consultarte por un proyecto.',
   github: 'https://github.com/ivo99o',
+  instagram: 'https://instagram.com/ivo_devlpmt',
+  instagramUsuario: '@ivo_devlpmt',
+  email: 'ivanmena0499@gmail.com',
   ubicacion: 'Tucumán, Argentina',
 }
 
 export const NAVEGACION = [
   { id: 'proyectos', texto: 'Proyectos' },
   { id: 'servicios', texto: 'Servicios' },
-  { id: 'stack', texto: 'Stack' },
+  { id: 'herramientas', texto: 'Herramientas' },
   { id: 'contacto', texto: 'Contacto' },
 ]
 
@@ -41,8 +43,8 @@ export const SERVICIOS = [
 ]
 
 export const STACK = [
-  { grupo: 'Frontend', items: ['React', 'Vite', 'React Router', 'Bootstrap', 'Tailwind CSS'] },
-  { grupo: 'Backend', items: ['Node.js', 'Express', 'JWT', 'API REST'] },
-  { grupo: 'Datos y servicios', items: ['PostgreSQL', 'Supabase', 'MongoDB', 'Cloudinary'] },
-  { grupo: 'Integraciones', items: ['Twilio WhatsApp', 'whatsapp-web.js', 'PDF', 'Vercel'] },
+  { grupo: 'Lo que ve el usuario', items: ['React', 'Vite', 'React Router', 'Bootstrap', 'Tailwind CSS'] },
+  { grupo: 'El motor por detrás', items: ['Node.js', 'Express', 'JWT', 'API REST'] },
+  { grupo: 'Dónde se guarda la información', items: ['PostgreSQL', 'Supabase', 'MongoDB', 'Cloudinary'] },
+  { grupo: 'Conexiones con otros servicios', items: ['Twilio WhatsApp', 'whatsapp-web.js', 'PDF', 'Vercel'] },
 ]

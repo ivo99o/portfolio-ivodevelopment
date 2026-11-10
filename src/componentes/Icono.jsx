@@ -53,6 +53,19 @@ const TRAZOS = {
       <path d="M3 17l5-4 4 3 3-2 6 4" />
     </>
   ),
+  instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.5 6.5h.01" />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 7l9 6 9-6" />
+    </>
+  ),
   tilde: <path d="M5 12.500l4.500 4.500L19 7.500" />,
 }
 

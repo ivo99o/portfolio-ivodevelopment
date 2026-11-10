@@ -1,22 +1,38 @@
 import { useCallback, useEffect, useState } from 'react'
 import Icono from './Icono.jsx'
 
-function Galeria({ imagenes, titulo }) {
+export function VistaPrevia({ imagenes, titulo, onAbrir }) {
+  const primera = imagenes[0]
+  return (
+    <div className="ventana">
+      <div className="ventana-barra">
+        <span /> <span /> <span />
+      </div>
+      {primera ? (
+        <button type="button" className="ventana-imagen" onClick={onAbrir} aria-label={`Ver capturas de ${titulo}`}>
+          <img src={primera.src} alt={primera.alt || `${titulo}, captura`} loading="lazy" />
+        </button>
+      ) : (
+        <div className="ventana-vacia">
+          <Icono nombre="imagen" tam={34} />
+          <p>Capturas próximamente</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export function Visor({ imagenes, titulo, onCerrar }) {
   const [activa, setActiva] = useState(0)
-  const [ampliada, setAmpliada] = useState(false)
   const total = imagenes.length
 
-  const mover = useCallback(
-    (paso) => setActiva((i) => (i + paso + total) % total),
-    [total]
-  )
+  const mover = useCallback((paso) => setActiva((i) => (i + paso + total) % total), [total])
 
   useEffect(() => {
-    if (!ampliada) return undefined
     const alTeclear = (e) => {
-      if (e.key === 'Escape') setAmpliada(false)
-      if (e.key === 'ArrowLeft') mover(-1)
-      if (e.key === 'ArrowRight') mover(1)
+      if (e.key === 'Escape') onCerrar()
+      if (total > 1 && e.key === 'ArrowLeft') mover(-1)
+      if (total > 1 && e.key === 'ArrowRight') mover(1)
     }
     document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', alTeclear)
@@ -24,73 +40,44 @@ function Galeria({ imagenes, titulo }) {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', alTeclear)
     }
-  }, [ampliada, mover])
+  }, [mover, onCerrar, total])
 
-  if (total === 0) {
-    return (
-      <div className="ventana">
-        <div className="ventana-barra">
-          <span /> <span /> <span />
-        </div>
-        <div className="ventana-vacia">
-          <Icono nombre="imagen" tam={34} />
-          <p>Capturas próximamente</p>
-        </div>
-      </div>
-    )
-  }
+  const detener = (e) => e.stopPropagation()
 
   return (
-    <>
-      <div className="ventana">
-        <div className="ventana-barra">
-          <span /> <span /> <span />
+    <div className="visor" role="dialog" aria-modal="true" aria-label={`Capturas de ${titulo}`} onClick={onCerrar}>
+      <button type="button" className="visor-cerrar" aria-label="Cerrar" onClick={onCerrar}>
+        <Icono nombre="cerrar" />
+      </button>
+      {total === 0 ? (
+        <div className="visor-vacio" onClick={detener}>
+          <Icono nombre="imagen" tam={40} />
+          <h3>Capturas próximamente</h3>
+          <p>Estoy preparando las capturas de {titulo}.</p>
         </div>
-        <button type="button" className="ventana-imagen" onClick={() => setAmpliada(true)} aria-label="Ampliar captura">
-          <img src={imagenes[activa].src} alt={imagenes[activa].alt || `${titulo}, captura ${activa + 1}`} loading="lazy" />
-        </button>
-        {total > 1 && (
-          <div className="ventana-miniaturas">
-            {imagenes.map((img, i) => (
-              <button
-                key={img.src}
-                type="button"
-                className={i === activa ? 'activa' : ''}
-                onClick={() => setActiva(i)}
-                aria-label={`Ver captura ${i + 1}`}
-              >
-                <img src={img.src} alt="" loading="lazy" />
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-      {ampliada && (
-        <div className="visor" role="dialog" aria-modal="true" onClick={() => setAmpliada(false)}>
-          <button type="button" className="visor-cerrar" aria-label="Cerrar" onClick={() => setAmpliada(false)}>
-            <Icono nombre="cerrar" />
-          </button>
+      ) : (
+        <>
           {total > 1 && (
             <button
               type="button"
               className="visor-flecha izquierda"
               aria-label="Anterior"
               onClick={(e) => {
-                e.stopPropagation()
+                detener(e)
                 mover(-1)
               }}
             >
               <Icono nombre="izquierda" />
             </button>
           )}
-          <img src={imagenes[activa].src} alt={imagenes[activa].alt || titulo} onClick={(e) => e.stopPropagation()} />
+          <img src={imagenes[activa].src} alt={imagenes[activa].alt || titulo} onClick={detener} />
           {total > 1 && (
             <button
               type="button"
               className="visor-flecha derecha"
               aria-label="Siguiente"
               onClick={(e) => {
-                e.stopPropagation()
+                detener(e)
                 mover(1)
               }}
             >
@@ -100,10 +87,8 @@ function Galeria({ imagenes, titulo }) {
           <p className="visor-contador">
             {activa + 1} / {total}
           </p>
-        </div>
+        </>
       )}
-    </>
+    </div>
   )
 }
-
-export default Galeria

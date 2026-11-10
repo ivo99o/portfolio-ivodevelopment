@@ -1,4 +1,3 @@
-import { SITIO } from '../datos/sitio.js'
 import Logo from './Logo.jsx'
 
 function Pie() {
@@ -6,9 +5,7 @@ function Pie() {
     <footer className="pie">
       <div className="contenedor pie-fila">
         <Logo />
-        <p>
-          {SITIO.ubicacion} · {new Date().getFullYear()}
-        </p>
+        <p>Página creada por Iván Mena · {new Date().getFullYear()}</p>
       </div>
     </footer>
   )
