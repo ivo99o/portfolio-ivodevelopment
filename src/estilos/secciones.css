@@ -140,15 +140,18 @@
   padding: 88px 0;
 }
 
-.seccion-contacto {
+.cierre {
   display: flex;
-  align-items: center;
-  min-height: calc(100vh - 77px);
-  min-height: calc(100svh - 77px);
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: 68px;
+  background: var(--fondo-alt);
 }
 
-.seccion-contacto > .contenedor {
-  width: 100%;
+.cierre .seccion {
+  padding: 48px 0 36px;
 }
 
 .seccion-alt {
@@ -183,6 +186,10 @@
 @media (max-width: 767.98px) {
   .seccion {
     padding: 64px 0;
+  }
+
+  .cierre .seccion {
+    padding: 40px 0 28px;
   }
 }
 

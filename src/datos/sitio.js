@@ -2,7 +2,7 @@ export const SITIO = {
   nombre: 'ivo_devlpmt',
   titular: 'Desarrollo web y sistemas a medida',
   bajada:
-    'Hola, soy Iván Mena, pero me dicen ivo. Diseño y programo páginas web y sistemas de gestión para emprendedores y negocios: simples de usar, rápidos y pensados para tu forma de trabajar.',
+    'Hola, soy Iván Mena, pero me dicen ivo, estudiante de la UTN. Diseño y programo páginas web y sistemas de gestión para emprendedores y negocios: simples de usar, rápidos y pensados para tu forma de trabajar.',
   whatsapp: '5493813043167',
   mensajeWhatsapp: 'Hola Ivo, vi tu portfolio y quiero consultarte por un proyecto.',
   github: 'https://github.com/ivo99o',

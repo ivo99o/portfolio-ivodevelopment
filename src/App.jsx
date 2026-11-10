@@ -15,9 +15,11 @@ function App() {
         <Proyectos />
         <Servicios />
         <Stack />
-        <Contacto />
+        <div className="cierre">
+          <Contacto />
+          <Pie />
+        </div>
       </main>
-      <Pie />
     </>
   )
 }

@@ -4,7 +4,7 @@ import Icono from './Icono.jsx'
 function Contacto() {
   const enlaceWhatsapp = `https://wa.me/${SITIO.whatsapp}?text=${encodeURIComponent(SITIO.mensajeWhatsapp)}`
   return (
-    <section id="contacto" className="seccion seccion-alt seccion-contacto">
+    <section id="contacto" className="seccion seccion-contacto" data-al-final>
       <div className="contenedor">
         <div className="contacto">
           <p className="seccion-etiqueta">// contacto</p>
