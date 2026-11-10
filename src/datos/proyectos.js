@@ -4,8 +4,8 @@ export const PROYECTOS = [
     etiqueta: 'Sistema de gestión',
     titulo: 'CRM para taller de vehículos',
     descripcion:
-      'Sistema para administrar un taller: clientes, vehículos, mecánicos e historial. Cada cliente recibe un código para seguir su vehículo: estado, mecánico a cargo, fotos, fecha y hora de cada actualización y un mensaje explicativo. Incluye los presupuestos y facturas en PDF.',
-    tecnologias: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary'],
+      'Sistema para administrar un taller: clientes, vehículos, mecánicos e historial. Cada cliente recibe un código para seguir su vehículo: estado, mecánico a cargo, fotos, fecha y hora de cada actualización y un mensaje explicativo. Avisa por WhatsApp cuando el vehículo ingresa y cada vez que cambia de estado. Incluye los presupuestos y facturas en PDF.',
+    tecnologias: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary', 'whatsapp-web.js'],
     imagenes: [
       { src: '/img/crm/dashboard.webp', alt: 'Panel del taller: facturación, cobros, trabajos por semana y ranking de mecánicos.', pie: 'Panel del taller: facturación, cobros, trabajos por semana y ranking de mecánicos.' },
       { src: '/img/crm/login.webp', alt: 'Ingreso al panel de administración con sesión de 12 horas.', pie: 'Ingreso al panel de administración con sesión de 12 horas.' },
