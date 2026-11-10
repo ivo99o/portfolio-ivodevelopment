@@ -13,9 +13,9 @@ export const PROYECTOS = [
   {
     id: 'tareo',
     etiqueta: 'Demo en vivo',
-    titulo: 'Gestor de tareas con avisos',
+    titulo: 'Tareo',
     descripcion:
-      'tareo organiza tus tareas con categorías y fechas límite, y te avisa por WhatsApp cuando una está por vencer. Podés crear una cuenta y probarlo ahora.',
+      'Gestor de tareas con avisos. Organizá tus tareas con categorías y fechas límite, y recibí un aviso por WhatsApp cuando una esté por vencer. Podés crear una cuenta y probarlo ahora.',
     tecnologias: ['React', 'Vite', 'Bootstrap', 'Supabase', 'PostgreSQL', 'Twilio', 'Vercel'],
     imagenes: [],
     enlaces: [
